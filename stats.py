@@ -1,6 +1,10 @@
+def get_contents(ibook):
+    with open(ibook) as target:
+        return target.read()
+
+
 def get_words(i):
     words = i.split()
-    print(f"{len(words)} total worlds")
     return words
 
 
@@ -15,10 +19,7 @@ def count_words(arry):
             word[lowercase_word] = 1
 
     sorted_word = sorted(word.items(), key=lambda item: item[1], reverse=True)
-    print("top 10 word appear: ")
-
-    for tword, tnum in sorted_word[:10]:
-        print(f"{tword}: {tnum}")
+    return sorted_word
 
 
 # def count_alphabet:
